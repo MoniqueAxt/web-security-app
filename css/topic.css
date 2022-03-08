@@ -1,0 +1,35 @@
+
+#createNewTopicBtn {
+    float: right;
+    display: flex;
+    margin-right: 10px !important;
+}
+#createNewTopicBtn:hover {
+    background-color: #ddd;
+    color: #535a87;
+}
+#submitNewTopicForm {
+    display: none;
+}
+
+/* list of topics / search results */
+li {
+    padding: 5px 8px;
+    font-size: 16px;
+}
+
+li a {
+    padding: 5px ;
+}
+li a:link {
+    text-decoration: none;
+}
+
+li a:hover {   /* MUST be after a:link */
+   // text-decoration: underline;
+    background-color: #535a87;
+    color: white;
+}
+fieldset {
+
+}

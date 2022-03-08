@@ -1,0 +1,240 @@
+/*******************************************************************************
+ * File: style.css
+ * Desc: CSS file for Projekt
+ *
+ * Monique Axt
+ ******************************************************************************/
+
+* {
+    box-sizing: border-box;
+   /* border: thin solid green;*/
+
+}
+
+html {
+    max-width: 1300px;
+    margin: auto;
+    font: 13px/1.2 Helvetica, Arial, sans-serif;
+    background: #EAEAEA;
+    padding-bottom: 200px;
+}
+
+header {
+    padding: 1px;
+    text-align: center;
+    color: #363535;
+    background-image: url("../img/bg_banner.png");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+}
+body {
+    margin: 0;
+    background: #e5e5e5;
+    border: thin solid #c7c7c7;
+    box-shadow: -2px 5px 25px black;
+    border-radius: 5px;
+    padding: 5px;
+}
+/* Increase the font size of the heading */
+.header h1 {
+    font-size: 40px;
+}
+
+#logout{
+    display: none ;
+}
+
+/* NAVIGATION LINKS (top of page) */
+nav {
+    overflow: hidden;
+    background-color: rgba(74, 74, 90, 0.87);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+nav a.right {
+    float: right;
+}
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+nav a:hover, #navTopBtn:hover,
+input[type=button]:hover, button:hover
+{
+    background-color: #cdcccc;
+    color: #535a87;
+}
+nav a.active {
+    background-color: #cdcccc;
+    color: #535a87;
+}
+
+
+/* COMMON DOMs ****************************************/
+h1 {
+    font-size: 45px;
+    line-height: 90px;
+    padding: 5px 0;
+}
+
+h2 {
+    margin: 10px 0 10px 0;
+    color: #535a87;
+    font-size: 20px;
+}
+
+fieldset {
+    margin: 15px 10px 15px 10px;
+    padding: 15px 15px 5px 15px;
+    min-width: 0;
+    text-overflow: ellipsis;
+}
+
+ fieldset legend {
+     color: #535a87;
+     font-size: 16px;
+ }
+
+ fieldset>p{
+     word-wrap: break-word;
+ }
+
+
+#navTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgba(74, 74, 90, 0.87);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+
+/* CONTENT in body ***********************************************'*/
+/* Column container */
+main {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: nowrap;
+    min-width: 0;
+
+}
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+aside {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+   /* min-width: 0;*/
+}
+/* Section (content) column */
+section {
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+    min-width: 0;
+}
+
+/** SUBMIT TOPIC or POST *********************************/
+textarea {
+    resize: vertical;
+    max-height: 500px;
+    min-height: 50px;
+    min-width: 100%;
+}
+
+#charCount {
+    float: right;
+    padding-top: 10px;
+}
+
+input {
+    margin: 10px 0;
+
+}
+input[type=button], button{
+    margin: 2px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: rgba(74, 74, 90, 0.87);
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+input[type=button]:disabled, button[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #5a5959;
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    nav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* ERROR */
+#error_main{
+    display: table;
+    width: 100%;
+    text-align: center;
+    transition: all 0.6s;
+    font-family: 'Lato', sans-serif;
+    color: #888;
+    margin: 0;
+    height: 100%;
+}
+
+.fof{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.fof h2{
+    font-size: 50px;
+    display: inline-block;
+    padding-right: 12px;
+    animation: type .5s alternate infinite;
+}
+
+@keyframes type{
+    from{box-shadow: inset -3px 0 0 #888;}
+    to{box-shadow: inset -3px 0 0 transparent;}
+}
+
+.error_link {
+    padding: 5px;
+}
