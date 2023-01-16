@@ -1,4 +1,3 @@
-# web-security-app
 <h2 align="center">
   <a href="https://www.moniqueaxt.com/portfolio/web-security-project/" target="_blank">
     Project webpage
